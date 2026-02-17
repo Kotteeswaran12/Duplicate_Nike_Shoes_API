@@ -2,8 +2,9 @@ package com.CloneNike.Shoes_API.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.CloneNike.Shoes_API.Entity.NikeShoes;
+import com.CloneNike.Shoes_API.Entity.KicksShoes;
 
-public interface ShoesRepo  extends JpaRepository<NikeShoes, Integer>{
+
+public interface ShoesRepo  extends JpaRepository<KicksShoes, Integer>{
 
 }

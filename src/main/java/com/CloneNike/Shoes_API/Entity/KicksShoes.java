@@ -38,7 +38,7 @@ public class KicksShoes {
 	private double price;
 	private double rating;
 
-	@OneToMany(mappedBy = "nikeShoes", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "kicksShoe", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JsonManagedReference
 	private List<ShoesImages> img;
 
@@ -53,6 +53,19 @@ public class KicksShoes {
 	@OneToMany(mappedBy = "kicksShoes", cascade = CascadeType.ALL)
 	@JsonManagedReference
 	private List<ShoesColors> colors;
+	
+	
+	@OneToMany(mappedBy = "kicksShoes" , cascade = CascadeType.ALL)
+	@JsonManagedReference
+	private List<ShoesReview> reviews;
+
+	public List<ShoesReview> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<ShoesReview> reviews) {
+		this.reviews = reviews;
+	}
 
 	public int getId() {
 		return id;
@@ -138,7 +151,7 @@ public class KicksShoes {
 	public String toString() {
 		return "KicksShoes [id=" + id + ", name=" + name + ", brand=" + brand + ", category=" + category + ", gender="
 				+ gender + ", price=" + price + ", rating=" + rating + ", img=" + img + ", details=" + details
-				+ ", size=" + size + ", colors=" + colors + "]";
+				+ ", size=" + size + ", colors=" + colors + ", reviews=" + reviews + "]";
 	}
 
 }

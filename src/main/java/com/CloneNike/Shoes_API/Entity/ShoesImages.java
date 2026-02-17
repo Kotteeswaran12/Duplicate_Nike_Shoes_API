@@ -23,18 +23,19 @@ public class ShoesImages {
 	@ManyToOne
 	@JoinColumn(name = "Shoe_id")
 	@JsonBackReference
-	private NikeShoes nikeShoes;
+	private KicksShoes kicksShoe;
 	
 	
 	
 
-	public NikeShoes getNikeShoes() {
-		return nikeShoes;
+	public KicksShoes getKicksShoe() {
+	    return kicksShoe;
 	}
 
-	public void setNikeShoes(NikeShoes nikeShoes) {
-		this.nikeShoes = nikeShoes;
+	public void setKicksShoe(KicksShoes kicksShoe) {
+	    this.kicksShoe = kicksShoe;
 	}
+
 
 	public int getId() {
 		return id;

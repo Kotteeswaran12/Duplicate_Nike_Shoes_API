@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.CloneNike.Shoes_API.Entity.NikeShoes;
+import com.CloneNike.Shoes_API.Entity.KicksShoes;
+
 import com.CloneNike.Shoes_API.Service.ShoesService;
 
 @RestController
@@ -19,17 +20,17 @@ public class ShoeController {
 	private ShoesService service ;
 	
 	@PostMapping("/add")
-	public NikeShoes addProduct(@RequestBody NikeShoes s) {
+	public KicksShoes addProduct(@RequestBody KicksShoes s) {
 		return service.addProduct(s);
 	}
 	
 	@GetMapping("/get")
-	public List<NikeShoes> getAllShoes(){
+	public List<KicksShoes> getAllShoes(){
 		return service.getAllShoes();
 	}
 	
 	@GetMapping("/get/{id}")
-	public NikeShoes getById(@PathVariable Integer id) {
+	public KicksShoes getById(@PathVariable Integer id) {
 		return service.getById(id);
 	}
 }
