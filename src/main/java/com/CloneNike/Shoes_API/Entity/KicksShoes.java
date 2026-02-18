@@ -58,6 +58,11 @@ public class KicksShoes {
 	@OneToMany(mappedBy = "kicksShoes" , cascade = CascadeType.ALL)
 	@JsonManagedReference
 	private List<ShoesReview> reviews;
+	
+		
+	@OneToMany(mappedBy = "kicksShoes" , cascade = CascadeType.ALL)
+	@JsonManagedReference
+	private List<ShoesTags> tags;
 
 	public List<ShoesReview> getReviews() {
 		return reviews;
@@ -146,12 +151,22 @@ public class KicksShoes {
 	public void setSize(List<ShoesSize> size) {
 		this.size = size;
 	}
+	
+	
+
+	public List<ShoesTags> getTags() {
+		return tags;
+	}
+
+	public void setTags(List<ShoesTags> tags) {
+		this.tags = tags;
+	}
 
 	@Override
 	public String toString() {
 		return "KicksShoes [id=" + id + ", name=" + name + ", brand=" + brand + ", category=" + category + ", gender="
 				+ gender + ", price=" + price + ", rating=" + rating + ", img=" + img + ", details=" + details
-				+ ", size=" + size + ", colors=" + colors + ", reviews=" + reviews + "]";
+				+ ", size=" + size + ", colors=" + colors + ", reviews=" + reviews + ", tags=" + tags + "]";
 	}
 
 }
